@@ -1,5 +1,5 @@
-<script>
-      const CARDS_PER_PAGE = 3;
+
+    const CARDS_PER_PAGE = 3;
       let currentPage = 0;
 
       const plants = [
@@ -145,4 +145,4 @@
       document.getElementById("nextButton").addEventListener("click", showNext);
 
       renderCards();
-    </script>
+   
