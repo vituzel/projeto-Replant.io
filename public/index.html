@@ -1,11 +1,527 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quem Somos + Mudas Disponíveis</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link href="./output.css" rel="stylesheet" />
+
+  <style>
+    html {
+      font-family: 'Outfit', system-ui, sans-serif !important;
+    }
+
+    
+    .card-float {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-float:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
+
     
+<!-- NAVBAR -->
+<header id="inicio" class="w-full bg-white shadow-md border-b border-gray-100">
+  <div class="max-w-[1440px] mx-auto h-[90px] px-10 flex items-center justify-between">
+
+    
+    <div class="flex items-center gap-3">
+        <img
+          src="./icons/Img_Logo.png"
+          alt="Replant.io"
+          class="h-12 w-12 object-contain"
+        />
+      
+      <span class="text-2xl font-semibold tracking-tight">
+        Replant<span class="text-[#34A853]">.io</span>
+      </span>
+    </div>
+
+    
+    <nav class="flex-1 flex justify-center text-sm">
+      <a href="#inicio" class="font-medium text-[#34A853]  mx-6 px-3 py-1 rounded-full transition-colors">
+        Início
+      </a>
+      <a href="#quem-somos" class="text-gray-900 hover:text-[#34A853] hover:bg-green-50 mx-6 px-3 py-1 rounded-full transition-colors">
+        Quem Somos
+      </a>
+      <a href="#como-participar" class="text-gray-900 hover:text-[#34A853] hover:bg-green-50 mx-6 px-3 py-1 rounded-full transition-colors">
+        Como Participar
+      </a>
+      <a href="#mudas-disponiveis" class="text-gray-900 hover:text-[#34A853] hover:bg-green-50 mx-6 px-3 py-1 rounded-full transition-colors">
+        Mudas Disponíveis
+      </a>
+    </nav>
+
+
+    <a
+      href="#login"
+      class="ml-8 inline-flex items-center justify-center px-8 py-2 rounded-full
+             bg-green-600 text-white text-sm font-semibold shadow-sm
+             hover:bg-green-700 transition-colors"
+    >
+      Login
+    </a>
+  </div>
+</header>
+
+
+  <!-- SEÇÃO QUEM SOMOS -->
+  <section id="quem-somos" class="bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-12">
+
+      <div class="flex justify-center mb-10">
+        <span class="inline-block rounded-full bg-[#C7F0C9] px-8 py-2 text-sm font-semibold tracking-wide text-green-800">
+          QUEM SOMOS
+        </span>
+      </div>
+
+      
+      <div class="grid gap-6 md:grid-cols-2">
+        
+        <div class="rounded-xl border border-green-300 px-6 py-6 shadow-sm">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+            Missão
+          </h3>
+          <p class="text-sm leading-relaxed text-gray-700">
+            Promover a <span class="font-semibold">restauração ambiental</span> através do plantio
+            acessível e transparente de árvores nativas, conectando
+            pessoas, empresas e comunidades ao reflorestamento
+            regenerativo.
+          </p>
+        </div>
+
+        
+        <div class="rounded-xl border border-green-300 px-6 py-6 shadow-sm">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+            Visão
+          </h3>
+          <p class="text-sm leading-relaxed text-gray-700">
+            Ser a <span class="font-semibold">maior plataforma digital</span> de plantio de árvores do
+            Brasil, contribuindo para a recuperação de áreas degradadas,
+            melhoria da <span class="font-semibold">biodiversidade</span> e <span class="font-semibold">redução</span> das
+            emissões de carbono.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="bg-[#D8FBD7]">
+      <div class="max-w-5xl mx-auto px-4 py-10">
+        <div class="grid gap-8 text-center md:grid-cols-3">
+
+          <div class="flex flex-col items-center gap-3">
+            <div class="flex items-center justify-center h-10 w-16 rounded-full text-xs font-semibold text-green-900 uppercase tracking-wide">
+              <img src="/projeto-Replant.io/public/icons/CO2.png" alt="ícone de CO2">
+            </div>
+            <p class="text-lg font-semibold text-gray-900">
+              <span class="text-green-700">+ 18.900 kg</span><br />
+              de CO₂ compensados<br />
+              por mês
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <div class="flex items-center justify-center h-10 w-10 rounded-full text-2xl">
+              <img src="/projeto-Replant.io/public/icons/Evergreen.png" alt="ícone de árvore">
+            </div>
+            <p class="text-lg font-semibold text-gray-900">
+              Mais de <span class="text-green-700">20.000</span><br />
+              pessoas plantaram<br />
+              árvores conosco
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <div class="flex items-center justify-center h-10 w-10 rounded-full text-2xl">
+              <img src="/projeto-Replant.io/public/icons/Worldwide Location.png" alt="ícone de localização">
+            </div>
+            <p class="text-lg font-semibold text-gray-900">
+              <span class="text-green-700">+ 52</span> áreas<br />
+              restauradas
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO MUDAS DISPONÍVEIS -->
+  <section id="mudas-disponiveis" class="bg-[#DDFBD8] py-16">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <div class="flex justify-center mb-4">
+        <span class="inline-block rounded-full bg-[#C7F0C9] px-6 py-2 text-xs font-semibold tracking-wide text-green-800 uppercase">
+          Reconstrua o amanhã
+        </span>
+      </div>
+
+      <h2 class="text-center text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+        Confira as nossas <span class="text-[#34A853]">mudas</span> disponíveis!
+      </h2>
+      <p class="text-center text-sm md:text-base text-gray-700">
+        Escolha espécies nativas cultivadas em viveiros certificados:
+      </p>
+
+      
+      <div class="mt-10 flex items-center justify-center gap-6">
+
+        
+        <button
+          id="prevButton"
+          class="hidden md:flex items-center justify-center h-20 w-8 rounded-full transition shrink-0"
+          aria-label="Anterior"
+        >
+          <img
+            src="/projeto-Replant.io/public/icons/Chevron Left.png"
+            alt="Anterior"
+            class="h-12 w-12"
+          />
+        </button>
+
+        
+        <div id="plantsCarousel" class="flex gap-6"></div>
+
+        
+        <button
+          id="nextButton"
+          class="hidden md:flex items-center justify-center h-20 w-8 rounded-full transition shrink-0"
+          aria-label="Próximo"
+        >
+          <img
+            src="/projeto-Replant.io/public/icons/Chevron Right.png"
+            alt="Próximo"
+            class="h-12 w-12"
+          />
+        </button>
+      </div>
+
+      
+      <div id="carouselDots" class="mt-6 flex justify-center gap-2"></div>
+
+    </div>
+  </section>
+
+  <script>
+    const CARDS_PER_PAGE = 3;
+    let currentPage = 0;
+
+    
+    const plants = [
+      {
+        common_name: "Araucária",
+        scientific_name: "Araucariaceae",
+        description:
+          "Conífera nativa do sul do Brasil, pode atingir grandes alturas e desempenha papel essencial na manutenção da biodiversidade.",
+        image: "/projeto-Replant.io/public/img/araucaria.png",
+      },
+      {
+        common_name: "Ipê-Amarelo",
+        scientific_name: "Bignoniaceae",
+        description:
+          "Muito usada em reflorestamento urbano por sua beleza, resistência e adaptação a diferentes climas.",
+        image: "/projeto-Replant.io/public/img/ipe.png",
+      },
+      {
+        common_name: "Pau-Brasil",
+        scientific_name: "Fabaceae",
+        description:
+          "Árvore símbolo nacional, famosa por sua madeira avermelhada e pela importância histórica.",
+        image: "/projeto-Replant.io/public/img/pau-br.png",
+      },
+      {
+        common_name: "Jequitibá-rosa",
+        scientific_name: "Cariniana legalis",
+        description:
+          "Uma das maiores árvores da Mata Atlântica, importante para conservação da biodiversidade.",
+        image: "/projeto-Replant.io/public/img/jequitiba.png",
+      },
+      {
+        common_name: "Embaúba",
+        scientific_name: "Cecropia pachystachya",
+        description:
+          "Espécie pioneira muito usada em recuperação de áreas degradadas.",
+        image: "/projeto-Replant.io/public/img/embauaba.png",
+      },
+      {
+        common_name: "Jatobá",
+        scientific_name: "Hymenaea courbaril",
+        description:
+          "Árvore robusta, com madeira resistente e frutos apreciados pela fauna.",
+        image: "/projeto-Replant.io/public/img/jatoba.png",
+      },
+    ];
+
+    const totalPages = Math.ceil(plants.length / CARDS_PER_PAGE);
+
+    
+    function renderCards() {
+      const container = document.getElementById("plantsCarousel");
+      container.innerHTML = "";
+
+      const startIndex = currentPage * CARDS_PER_PAGE;
+      const endIndex = startIndex + CARDS_PER_PAGE;
+
+      const items = plants.slice(startIndex, endIndex);
+
+      items.forEach((plant) => {
+        const article = document.createElement("article");
+        article.className = "w-[311px] h-[432px]";
+
+        article.innerHTML = `
+          <div
+            class="h-full rounded-3xl shadow-lg flex flex-col p-2 card-float"
+            style="background-color:#4E9B42;"
+          >
+            <div class="h-[190px] rounded-2xl overflow-hidden">
+              <img src="${plant.image}" alt="${plant.common_name}"
+                class="w-full h-full object-cover" />
+            </div>
+            <div class="flex-1 mt-3 px-3 py-2 flex flex-col text-center">
+              <h3 class="text-lg font-semibold mb-1 text-white">
+                ${plant.common_name}
+              </h3>
+              <p class="text-xs font-semibold uppercase tracking-wide mb-3 text-black">
+                ${plant.scientific_name}
+              </p>
+              <p class="text-sm leading-relaxed text-black">
+                ${plant.description}
+              </p>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(article);
+      });
+
+      renderDots();
+    }
+
+    
+    function renderDots() {
+      const dotsContainer = document.getElementById("carouselDots");
+      if (!dotsContainer) return;
+
+      dotsContainer.innerHTML = "";
+
+      for (let i = 0; i < totalPages; i++) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+
+        
+        dot.style.width = "24px";
+        dot.style.height = "24px";
+        dot.style.display = "flex";
+        dot.style.alignItems = "center";
+        dot.style.justifyContent = "center";
+        dot.style.margin = "0 4px";
+        dot.style.cursor = "pointer";
+        dot.style.background = "transparent";
+        dot.style.border = "none";
+
+        
+        const innerCircle = document.createElement("span");
+        innerCircle.style.width = "12px";
+        innerCircle.style.height = "12px";
+        innerCircle.style.borderRadius = "9999px";
+        innerCircle.style.display = "block";
+        innerCircle.style.backgroundColor =
+          i === currentPage ? "#34A853" : "#D1D5DB";
+
+        dot.appendChild(innerCircle);
+
+        dot.addEventListener("click", () => {
+          currentPage = i;
+          renderCards();
+        });
+
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function showPrev() {
+      currentPage = (currentPage - 1 + totalPages) % totalPages;
+      renderCards();
+    }
+
+    function showNext() {
+      currentPage = (currentPage + 1) % totalPages;
+      renderCards();
+    }
+
+    document
+      .getElementById("prevButton")
+      .addEventListener("click", showPrev);
+
+    document
+      .getElementById("nextButton")
+      .addEventListener("click", showNext);
+
+    
+    renderCards();
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-white shadow-md border-b border-gray-100">
+  <div class="max-w-[1440px] mx-auto">
+
+    <div class="px-10 pt-10 pb-12 bg-linear-to-r from-white to-[#E1F7E0] flex flex-col md:flex-row gap-12">
+
+      <div class="md:w-1/3 space-y-6">
+        <div class="flex items-center gap-3">
+          <img
+            src="/projeto-Replant.io/public/icons/Img_Logo.png"
+            alt="Replant.io"
+            class="h-12 w-12"
+          />
+          <span class="text-2xl font-semibold tracking-tight">
+            Replant<span class="text-[#34A853]">.io</span>
+          </span>
+        </div>
+
+        <p class="text-sm text-gray-900 font-semibold">
+          Plante hoje. Reconstrua o amanhã.
+        </p>
+
+        <div class="space-y-4 text-sm text-gray-900">
+          <div>
+            <h4 class="font-semibold mb-1">Endereço:</h4>
+            <p class="leading-relaxed">
+              Avenida BPS, 1.303, no bairro<br>
+              Pinheirinho, CEP 37500-903
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-1">Contato:</h4>
+            <ul class="space-y-1">
+              <li class="flex items-center gap-2">
+                <span>📧</span>
+                <span>contato@replant.io</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span>💬</span>
+                <span>WhatsApp: (xx) xxxx-xxxx</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span>📍</span>
+                <span>Itajubá – MG, Brasil</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1 grid gap-10 md:grid-cols-3 text-sm">
+
+        <div>
+          <h4 class="text-sm font-semibold text-[#34A853] mb-3">Mapa do Site</h4>
+          <ul class="space-y-2 text-gray-900">
+            <li><a href="#inicio" class="hover:text-[#34A853]">• Início</a></li>
+            <li><a href="#quem-somos" class="hover:text-[#34A853]">• Quem Somos</a></li>
+            <li><a href="#quem-somos" class="hover:text-[#34A853]">• Nosso Impacto</a></li>
+            <li><a href="#mudas-disponiveis" class="hover:text-[#34A853]">• Mudas Disponíveis</a></li>
+            <li><a href="#como-participar" class="hover:text-[#34A853]">• Como Participar</a></li>
+            <li><a href="#contato" class="hover:text-[#34A853]">• Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-[#34A853] mb-3">Projetos</h4>
+          <ul class="space-y-2 text-gray-900">
+            <li>• Reflorestamento Urbano</li>
+            <li>• Recuperação de Nascentes</li>
+            <li>• Mata Atlântica</li>
+            <li>• Cerrado</li>
+            <li>• Amazônia</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col items-start justify-between">
+          <div>
+            <h4 class="text-sm font-semibold text-[#34A853] mb-3">Ajuda</h4>
+            <ul class="space-y-2 text-gray-900">
+              <li>• FAQs</li>
+              <li>• Política de Reembolso</li>
+              <li>• Transparência</li>
+              <li>• Relatórios</li>
+            </ul>
+          </div>
+
+          <div class="mt-24 flex gap-3">
+  <a
+    href="https://www.linkedin.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="h-8 w-8 inline-block"
+  >
+    <img
+      src="/projeto-Replant.io/public/icons/linkedin.png"
+      alt="Ícone do LinkedIn"
+      class="h-8 w-8"
+    />
+  </a>
+
+  <a
+    href="https://www.instagram.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="h-8 w-8 inline-block"
+  >
+    <img
+      src="/projeto-Replant.io/public/icons/instagram.png"
+      alt="Ícone do Instagram"
+      class="h-8 w-8"
+    />
+  </a>
+
+  <a
+    href="https://www.facebook.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="h-8 w-8 inline-block"
+  >
+    <img
+      src="/projeto-Replant.io/public/icons/facebook.png"
+      alt="Ícone do Facebook"
+      class="h-8 w-8"
+    />
+  </a>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bg-[#4E9B42] text-white text-xs md:text-sm">
+      <div class="max-w-[1440px] mx-auto px-10 py-3 flex items-center justify-center gap-4">
+        <p>
+          © 2025 Replant.io — Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
 </body>
 </html>
+
