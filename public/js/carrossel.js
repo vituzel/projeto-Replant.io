@@ -1,53 +1,30 @@
-
     const CARDS_PER_PAGE = 3;
-      let currentPage = 0;
+    let currentPage = 0;
+    let plants = [];
+    let totalPages = 0;
 
-      const plants = [
-        {
-          common_name: "Araucária",
-          scientific_name: "Araucariaceae",
-          description:
-            "Conífera nativa do sul do Brasil, pode atingir grandes alturas e desempenha papel essencial na manutenção da biodiversidade.",
-          image: "/projeto-Replant.io/public/img/araucaria.png",
-        },
-        {
-          common_name: "Ipê-Amarelo",
-          scientific_name: "Bignoniaceae",
-          description:
-            "Muito usada em reflorestamento urbano por sua beleza, resistência e adaptação a diferentes climas.",
-          image: "/projeto-Replant.io/public/img/ipe.png",
-        },
-        {
-          common_name: "Pau-Brasil",
-          scientific_name: "Fabaceae",
-          description:
-            "Árvore símbolo nacional, famosa por sua madeira avermelhada e pela importância histórica.",
-          image: "/projeto-Replant.io/public/img/pau-br.png",
-        },
-        {
-          common_name: "Jequitibá-rosa",
-          scientific_name: "Cariniana legalis",
-          description:
-            "Uma das maiores árvores da Mata Atlântica, importante para conservação da biodiversidade.",
-          image: "/projeto-Replant.io/public/img/jequitiba.png",
-        },
-        {
-          common_name: "Embaúba",
-          scientific_name: "Cecropia pachystachya",
-          description:
-            "Espécie pioneira muito usada em recuperação de áreas degradadas.",
-          image: "/projeto-Replant.io/public/img/embauaba.png",
-        },
-        {
-          common_name: "Jatobá",
-          scientific_name: "Hymenaea courbaril",
-          description:
-            "Árvore robusta, com madeira resistente e frutos apreciados pela fauna.",
-          image: "/projeto-Replant.io/public/img/jatoba.png",
-        },
-      ];
+    async function carregarPlantas() {
+        const url = "http://localhost:3000/plants";
 
-      const totalPages = Math.ceil(plants.length / CARDS_PER_PAGE);
+        try {
+          const response = await fetch(url);
+          const json = await response.json();
+
+          plants = json.data.filter(p => p.image_url).slice(0,6).map(p => ({
+            common_name: p.common_name || "Nome desconhecido",
+            scientific_name: p.scientific_name || "Nome cientifício desconhecido",
+            description: p.bibliography || "Sem descrição disponível",
+            image: p.image_url
+          }));
+
+          totalPages = Math.ceil(plants.length / CARDS_PER_PAGE);
+          renderCards();
+
+        } catch(error) {
+        console.error("Erro ao carregar dados das plantas", error)
+      }
+    }
+    carregarPlantas();
 
       function renderCards() {
         const container = document.getElementById("plantsCarousel");
@@ -141,8 +118,4 @@
       }
 
       document.getElementById("prevButton").addEventListener("click", showPrev);
-
       document.getElementById("nextButton").addEventListener("click", showNext);
-
-      renderCards();
-   
