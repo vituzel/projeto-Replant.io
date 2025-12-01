@@ -407,6 +407,67 @@
       </div>
     </section>
 
+    <!-- CALCULADORA -->
+
+    <section id="calculadora" class="w-full min-h-[400px] flex items-center justify-center bg-white overflow-hidden">
+      
+      <div class="max-w-[1440px] w-full px-8 flex flex-col lg:flex-row items-center justify-center gap-24">
+        
+        <div class="flex flex-col items-center gap-3 shrink-0">
+          <h3 class="text-2xl font-bold text-[#2F4F2F]">Quantas árvores você plantaria?</h3>
+          
+          <div class="w-[380px] h-[90px] bg-[#EADDCA] rounded-2xl p-2.5 shadow-sm relative">
+            <div class="w-full h-full bg-white rounded-xl flex items-center px-4 shadow-inner">
+              <input 
+                type="number" 
+                id="qtd-arvores" 
+                value="1" 
+                min="1" 
+                class="w-full h-full bg-transparent text-5xl font-bold text-[#2F4F2F] focus:outline-none placeholder-gray-300"
+                oninput="calcularImpacto()"
+              >
+              <span class="text-xl text-gray-400 font-medium whitespace-nowrap mb-1 mr-4">árvores</span>
+              
+              <div class="w-16">
+                <img src="./styles/img/calculadora/setaD.png">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <h3 class="text-2xl font-bold text-[#2F4F2F] mb-5">Seu Legado Verde:</h3>
+          
+          <div class="flex items-center gap-8">
+            
+            <div class="w-40 h-40 rounded-full bg-[#E5F2D6] flex flex-col items-center justify-center text-center shadow-md relative transition-all hover:-translate-y-1">
+              <img src="./styles/img/calculadora/folha.png" alt="" class="w-6 mb-3">
+              
+              <span class="text-xs font-semibold text-gray-600 leading-tight mb-1">CO₂ Sequestrado<br>(1 ano):</span>
+              <span class="text-2xl font-extrabold text-[#2F4F2F]"><span id="res-co2">15</span> kg</span>
+            </div>
+
+            <div class="w-40 h-40 rounded-full bg-[#E5F2D6] flex flex-col items-center justify-center text-center shadow-md relative transition-all hover:-translate-y-1">
+              <img src="./styles/img/calculadora/plantinha.png" alt="" class="w-8 mb-3">
+
+              <span class="text-xs font-semibold text-gray-600 leading-tight mb-1">Área<br>Restaurada:</span>
+              <span class="text-2xl font-extrabold text-[#2F4F2F]"><span id="res-area">1,5</span> m²</span>
+            </div>
+
+            <div class="w-40 h-40 rounded-full bg-[#F3E5D0] flex flex-col items-center justify-center text-center shadow-md relative transition-all hover:-translate-y-1">
+              <img src="./styles/img/calculadora/moeda.png" alt="" class="w-8 mb-3">
+
+              <span class="text-xs font-semibold text-gray-600 leading-tight mb-1">Custo<br>Estimado:</span>
+              <span class="text-2xl font-extrabold text-[#2F4F2F]">R$ <span id="res-custo">9,90</span></span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
     <!--  MUDAS DISPONÍVEIS  -->
 
     <section id="mudas-disponiveis" class="bg-[#DDFBD8] py-16">
@@ -626,7 +687,8 @@
       </div>
     </footer>
 
-    <script src="./js/carrossel.js" defer></script>
+    <script src="/public/js/calculadora.js"></script>
+    <script src="/public/js/carrossel.js" defer></script>
 
   </body>
 </html>
