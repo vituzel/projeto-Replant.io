@@ -41,21 +41,21 @@
 
           article.innerHTML = `
           <div
-            class="h-full rounded-3xl shadow-lg flex flex-col p-2 card-float"
+            class="h-full rounded-xl shadow-lg flex flex-col p-1 card-float"
             style="background-color:#4E9B42;"
           >
             <div class="h-[190px] rounded-2xl overflow-hidden">
               <img src="${plant.image}" alt="${plant.common_name}"
                 class="w-full h-full object-cover" />
             </div>
-            <div class="flex-1 mt-3 px-3 py-2 flex flex-col text-center">
+            <div class="flex-1 px-3 py-2 flex flex-col text-center">
               <h3 class="text-lg font-semibold mb-1 text-white">
                 ${plant.common_name}
               </h3>
-              <p class="text-xs font-semibold uppercase tracking-wide mb-3 text-black">
+              <p class="font-regular tracking-wide mb-3 text-black">
                 ${plant.scientific_name}
               </p>
-              <p class="text-sm leading-relaxed text-black">
+              <p class="leading-relaxed text-black">
                 ${plant.description}
               </p>
             </div>
